@@ -15,6 +15,9 @@ import Register from "../pages/Register";
 import DoctorList from "../pages/DoctorList";
 import Subscription from "../pages/Subscription";
 import MyReports from "../pages/MyReports";
+import DoctorLogin from "../pages/DoctorLogin";
+import DoctorDashboard from "../pages/DoctorDashboard";
+import DoctorRegister from "../pages/DoctorRegister";
 
 function Layout({ children }) {
   return (
@@ -56,7 +59,7 @@ export default function AppRoutes() {
             </Layout>
           }
         />
-
+        <Route path="/doctor-login" element={<DoctorLogin />} />
         <Route
           path="/ask-doctor"
           element={
@@ -65,7 +68,7 @@ export default function AppRoutes() {
             </Layout>
           }
         />
-
+        <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route
           path="/doctors"
           element={
@@ -74,7 +77,7 @@ export default function AppRoutes() {
             </Layout>
           }
         />
-
+        <Route path="/doctor-register" element={<DoctorRegister />} />
         <Route
           path="/doctors/:type"
           element={

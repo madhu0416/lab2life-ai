@@ -61,7 +61,21 @@ export default function MyReports() {
                 </p>
 
                 <p className="text-gray-300 mb-4">
-                  Risk Level:{" "}
+                  Risk Level:
+                    {report.verification_status === "Verified" ? (
+                      <div className="mt-3 mb-3">
+                        <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm">
+                          ✅ Verified by Dr. {report.verified_by_doctor}
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="mt-3 mb-3">
+                        <span className="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm">
+                          Pending Doctor Verification
+                        </span>
+                      </div>
+                  )}
+  
                   <span className="font-semibold">
                     {report.risk_level}
                   </span>
